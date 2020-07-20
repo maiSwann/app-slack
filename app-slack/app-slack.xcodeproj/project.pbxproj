@@ -16,6 +16,8 @@
 		1A4B26A824B8AC2C005C0311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4B26A724B8AC2C005C0311 /* Assets.xcassets */; };
 		1A4B26AB24B8AC2C005C0311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4B26A924B8AC2C005C0311 /* LaunchScreen.storyboard */; };
 		1A7946EA24C498C300F6D9AE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946E924C498C300F6D9AE /* GradientView.swift */; };
+		1A7946ED24C58BA300F6D9AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946EC24C58BA300F6D9AE /* Constants.swift */; };
+		1A7946EF24C599B400F6D9AE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946EE24C599B400F6D9AE /* LoginVC.swift */; };
 		9D66B2BE8BAD82DC9D483B5D /* Pods_app_slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0919F6046EFBA08B2227C3 /* Pods_app_slack.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		1A4B26AA24B8AC2C005C0311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A4B26AC24B8AC2C005C0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7946E924C498C300F6D9AE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1A7946EC24C58BA300F6D9AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A7946EE24C599B400F6D9AE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		261BF02499C96FC4054FBC47 /* Pods-app-slack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-slack.release.xcconfig"; path = "Target Support Files/Pods-app-slack/Pods-app-slack.release.xcconfig"; sourceTree = "<group>"; };
 		684769951A89EEF295502369 /* Pods-app-slack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-slack.debug.xcconfig"; path = "Target Support Files/Pods-app-slack/Pods-app-slack.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0919F6046EFBA08B2227C3 /* Pods_app_slack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_slack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +59,7 @@
 			children = (
 				1A2339BC24C47665009C6849 /* ChatVC.swift */,
 				1A2339BE24C47676009C6849 /* ChannelVC.swift */,
+				1A7946EE24C599B400F6D9AE /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 		1A4B269D24B8AC2A005C0311 /* app-slack */ = {
 			isa = PBXGroup;
 			children = (
+				1A7946EB24C58B8C00F6D9AE /* Utilities */,
 				1A2339C424C47EAF009C6849 /* Supporting Files */,
 				1A2339BB24C47644009C6849 /* Model */,
 				1A2339BA24C4763E009C6849 /* View */,
@@ -117,6 +123,14 @@
 				1A4B26AC24B8AC2C005C0311 /* Info.plist */,
 			);
 			path = "app-slack";
+			sourceTree = "<group>";
+		};
+		1A7946EB24C58B8C00F6D9AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1A7946EC24C58BA300F6D9AE /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		8C2DD91C35EAD1ADE8675789 /* Frameworks */ = {
@@ -254,8 +268,10 @@
 			files = (
 				1A2339BD24C47665009C6849 /* ChatVC.swift in Sources */,
 				1A4B269F24B8AC2A005C0311 /* AppDelegate.swift in Sources */,
+				1A7946EF24C599B400F6D9AE /* LoginVC.swift in Sources */,
 				1A7946EA24C498C300F6D9AE /* GradientView.swift in Sources */,
 				1A2339C824C47F04009C6849 /* SWRevealViewController.m in Sources */,
+				1A7946ED24C58BA300F6D9AE /* Constants.swift in Sources */,
 				1A4B26A124B8AC2A005C0311 /* SceneDelegate.swift in Sources */,
 				1A2339BF24C47676009C6849 /* ChannelVC.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AuthService {
     static let instance = AuthService()
@@ -43,24 +44,43 @@ class AuthService {
     
     func registerUser(email: String, password: String, completion: @escaping CompletionHandler) {
         let lowerCaseEmail = email.lowercased()
-        
-        let header: HTTPHeaders = [
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
-        
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
         ]
         
-        AF.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
+        AF.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             
             switch response.result {
             case .success( _):
-                    completion(true)
-                case .failure(let error):
-                    completion(false)
-                    debugPrint(error)
+                completion(true)
+            case .failure(let error):
+                completion(false)
+                debugPrint(error)
+            }
+        }
+    }
+    
+    func loginUser(email: String, password: String, completion: @escaping CompletionHandler) {
+        let lowerCaseEmail = email.lowercased()
+        let body: [String: Any] = [
+            "email": lowerCaseEmail,
+            "password": password
+        ]
+        
+        AF.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            
+            switch response.result {
+            case .success( _):
+                guard let data = response.data else { return }
+                let json = try! JSON(data: data)
+                self.userEmail = json["user"].stringValue
+                self.authToken = json["token"].stringValue
+                self.isLoggedIn = true
+                completion(true)
+            case .failure(let error):
+                completion(false)
+                debugPrint(error)
             }
         }
     }

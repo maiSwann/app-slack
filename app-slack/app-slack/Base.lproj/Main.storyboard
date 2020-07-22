@@ -273,9 +273,12 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="O91-ni-qDg" eventType="touchUpInside" id="dZ9-XW-r3n"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RkV-Wg-199">
-                                <rect key="frame" x="82" y="126" width="250" height="149"/>
+                                <rect key="frame" x="82" y="126" width="250" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-aV-kfo">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="25"/>
@@ -295,16 +298,16 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRD-Le-eJ0">
-                                        <rect key="frame" x="0.0" y="55" width="250" height="24"/>
+                                        <rect key="frame" x="0.0" y="55" width="250" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="KQH-No-S3x"/>
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Lm-92-xTF">
-                                        <rect key="frame" x="0.0" y="93" width="250" height="2"/>
+                                        <rect key="frame" x="0.0" y="94" width="250" height="2"/>
                                         <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="4AF-uD-n4B"/>
@@ -312,7 +315,7 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-eP-eZr">
-                                        <rect key="frame" x="0.0" y="109" width="250" height="24"/>
+                                        <rect key="frame" x="0.0" y="110" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Emv-WE-pbL"/>
                                         </constraints>
@@ -321,7 +324,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sa-bf-GnX">
-                                        <rect key="frame" x="0.0" y="147" width="250" height="2"/>
+                                        <rect key="frame" x="0.0" y="148" width="250" height="2"/>
                                         <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="K1c-8j-gRD"/>
@@ -331,7 +334,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODE-bI-hza">
-                                <rect key="frame" x="168.5" y="315" width="77" height="130"/>
+                                <rect key="frame" x="168.5" y="316" width="77" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="H2R-XM-AT6"/>
                                 </constraints>
@@ -339,17 +342,18 @@
                                 <state key="normal" title="Choose avatar"/>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="Yaw-I8-gTH" eventType="touchUpInside" id="ba2-FA-zwJ"/>
+                                    <action selector="pickAvatarPressed:" destination="O91-ni-qDg" eventType="touchUpInside" id="8ru-QF-qwo"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zfi-FU-nIs">
-                                <rect key="frame" x="157" y="315" width="100" height="100"/>
+                                <rect key="frame" x="157" y="316" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="9Tz-pS-QGa"/>
                                     <constraint firstAttribute="height" constant="100" id="x5Z-ob-y0x"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7D-fe-nNx">
-                                <rect key="frame" x="82" y="449" width="250" height="31"/>
+                                <rect key="frame" x="82" y="450" width="250" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="0Qh-fj-LL6"/>
                                     <constraint firstAttribute="height" constant="31" id="E2A-7I-AzJ"/>
@@ -358,6 +362,7 @@
                                 <state key="normal" title="Generate background color"/>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="Yaw-I8-gTH" eventType="touchUpInside" id="O0U-GB-YNi"/>
+                                    <action selector="pickBgColorPressed:" destination="O91-ni-qDg" eventType="touchUpInside" id="EhC-hm-SC2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -383,6 +388,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="rjW-dW-ML1"/>
                     <connections>
+                        <outlet property="emailTxt" destination="xRD-Le-eJ0" id="HCj-f8-Q76"/>
+                        <outlet property="passwordTxt" destination="BeO-eP-eZr" id="9st-Tq-0te"/>
+                        <outlet property="userImg" destination="zfi-FU-nIs" id="pg7-6M-InL"/>
+                        <outlet property="usernameTxt" destination="Mdv-aV-kfo" id="80b-fY-utu"/>
                         <segue destination="eOW-IQ-UcS" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="YwB-K0-Q5P"/>
                     </connections>
                 </viewController>

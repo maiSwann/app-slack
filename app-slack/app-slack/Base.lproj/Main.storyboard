@@ -203,7 +203,7 @@
                                     <action selector="createAccountBtnPressed:" destination="Yaw-I8-gTH" eventType="touchUpInside" id="y9T-6d-Vfe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seA-P6-cA7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seA-P6-cA7" customClass="RoundedButton" customModule="app_slack" customModuleProvider="target">
                                 <rect key="frame" x="82" y="295" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -262,7 +262,7 @@
                                 <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NU-pE-Tx6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NU-pE-Tx6" customClass="RoundedButton" customModule="app_slack" customModuleProvider="target">
                                 <rect key="frame" x="82" y="738" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

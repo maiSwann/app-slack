@@ -13,6 +13,8 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var avatarType = AvatarType.dark
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -25,6 +27,7 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
+            cell.configureCell(index: indexPath.item, type: avatarType)
             return cell
         }
         return AvatarCell()
@@ -34,10 +37,46 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
         return 1
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var numOfColumns : CGFloat = 3
+        
+        // getting the width of the screen size & 320 == width of smallest iphone size
+        if UIScreen.main.bounds.width > 320 {
+            numOfColumns = 4
+        }
+        
+        let spaceBetweenCells : CGFloat = 10
+        let padding : CGFloat = 40 // 20 on both sides
+        let cellDimension = ((collectionView.bounds.width - padding ) - (numOfColumns - 1) * spaceBetweenCells) / numOfColumns
+        
+        return CGSize(width: cellDimension, height: cellDimension)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if avatarType == .dark {
+            UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
+            print("item was selected : dark\(indexPath.item)")
+        } else {
+            UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
+        }
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     @IBAction func segmentControlChanged(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            avatarType = AvatarType.dark
+        case 1:
+            avatarType = AvatarType.light
+        default:
+            break
+        }
+        collectionView.reloadData()
     }
     
     @IBAction func backPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        print("back was pressed")
+        self.dismiss(animated: true, completion: nil)
     }
 }

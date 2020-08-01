@@ -23,6 +23,15 @@ class CreateAccountVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != "" {
+            print("named : \(UserDataService.instance.avatarName)")
+            userImg.image = UIImage(named: UserDataService.instance.avatarName)
+            avatarName = UserDataService.instance.avatarName
+        } else {
+            print("was an empty string")
+        }
+    }
     
     @IBAction func createAccountPressed(_ sender: Any) {
         guard let name = usernameTxt.text, usernameTxt.text != "" else

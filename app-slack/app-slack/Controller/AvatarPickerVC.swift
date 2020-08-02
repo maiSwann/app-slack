@@ -55,7 +55,6 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if avatarType == .dark {
             UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
-            print("item was selected : dark\(indexPath.item)")
         } else {
             UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
         }
@@ -76,7 +75,6 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func backPressed(_ sender: Any) {
-        print("back was pressed")
         self.dismiss(animated: true, completion: nil)
     }
 }

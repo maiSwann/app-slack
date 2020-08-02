@@ -24,6 +24,7 @@
 		1A7946F824C8886600F6D9AE /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946F724C8886500F6D9AE /* UserDataService.swift */; };
 		1A7946FA24C98BB300F6D9AE /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946F924C98BB300F6D9AE /* AvatarPickerVC.swift */; };
 		1A7946FC24C990F400F6D9AE /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946FB24C990F400F6D9AE /* AvatarCell.swift */; };
+		1A7946FE24D6A81500F6D9AE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7946FD24D6A81500F6D9AE /* CircleImage.swift */; };
 		9D66B2BE8BAD82DC9D483B5D /* Pods_app_slack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0919F6046EFBA08B2227C3 /* Pods_app_slack.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		1A7946F724C8886500F6D9AE /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		1A7946F924C98BB300F6D9AE /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		1A7946FB24C990F400F6D9AE /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		1A7946FD24D6A81500F6D9AE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		261BF02499C96FC4054FBC47 /* Pods-app-slack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-slack.release.xcconfig"; path = "Target Support Files/Pods-app-slack/Pods-app-slack.release.xcconfig"; sourceTree = "<group>"; };
 		684769951A89EEF295502369 /* Pods-app-slack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-slack.debug.xcconfig"; path = "Target Support Files/Pods-app-slack/Pods-app-slack.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0919F6046EFBA08B2227C3 /* Pods_app_slack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_slack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				1A7946E924C498C300F6D9AE /* GradientView.swift */,
 				1A7946F524C8453500F6D9AE /* RoundedButton.swift */,
 				1A7946FB24C990F400F6D9AE /* AvatarCell.swift */,
+				1A7946FD24D6A81500F6D9AE /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				1A4B26A124B8AC2A005C0311 /* SceneDelegate.swift in Sources */,
 				1A2339BF24C47676009C6849 /* ChannelVC.swift in Sources */,
 				1A7946FA24C98BB300F6D9AE /* AvatarPickerVC.swift in Sources */,
+				1A7946FE24D6A81500F6D9AE /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

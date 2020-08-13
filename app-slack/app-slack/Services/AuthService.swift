@@ -100,6 +100,7 @@ class AuthService {
             switch response.result {
             case .success( _):
                 guard let data = response.data else { return }
+                
                 self.setUserInfo(data: data)
                 completion(true)
             case .failure(let error):
@@ -110,7 +111,7 @@ class AuthService {
     }
     
     func findUserByEmail(completion: @escaping CompletionHandler) {
-        AF.request("\(URL_USER_BY_EMAIL)\(USER_EMAIL)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+        AF.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             switch response.result {
             case .success( _):

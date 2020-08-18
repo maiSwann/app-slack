@@ -633,9 +633,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7v-fM-GxS">
+                                <rect key="frame" x="8" y="796" width="34" height="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="z7v-fM-GxS" firstAttribute="leading" secondItem="LZi-fP-Lb1" secondAttribute="leading" constant="8" id="Hrn-qy-kog"/>
                             <constraint firstItem="LZi-fP-Lb1" firstAttribute="trailing" secondItem="ziz-iu-C1D" secondAttribute="trailing" constant="8" id="LBP-Ic-6d7"/>
                             <constraint firstItem="6sn-6K-g8D" firstAttribute="bottom" secondItem="LZi-fP-Lb1" secondAttribute="bottom" id="Rfx-58-umN"/>
                             <constraint firstItem="HDu-TJ-kK7" firstAttribute="leading" secondItem="LZi-fP-Lb1" secondAttribute="leading" id="Ruj-xr-ReP"/>
@@ -643,6 +650,7 @@
                             <constraint firstItem="ziz-iu-C1D" firstAttribute="centerY" secondItem="6sn-6K-g8D" secondAttribute="centerY" id="VIC-4h-dPK"/>
                             <constraint firstItem="Ca9-CI-egC" firstAttribute="trailing" secondItem="LZi-fP-Lb1" secondAttribute="trailing" id="Xf1-8B-5fv"/>
                             <constraint firstItem="6sn-6K-g8D" firstAttribute="leading" secondItem="LZi-fP-Lb1" secondAttribute="leading" id="bii-x0-JhV"/>
+                            <constraint firstItem="6sn-6K-g8D" firstAttribute="top" secondItem="z7v-fM-GxS" secondAttribute="bottom" constant="6" id="e96-7L-oJt"/>
                             <constraint firstItem="LZi-fP-Lb1" firstAttribute="trailing" secondItem="6sn-6K-g8D" secondAttribute="trailing" id="efY-WK-Rv9"/>
                             <constraint firstItem="Ca9-CI-egC" firstAttribute="top" secondItem="JjZ-d0-wEb" secondAttribute="top" id="ggs-mi-jT1"/>
                             <constraint firstItem="6sn-6K-g8D" firstAttribute="top" secondItem="HDu-TJ-kK7" secondAttribute="bottom" constant="30" id="iqN-dd-R67"/>
@@ -657,6 +665,7 @@
                         <outlet property="messageTxtBox" destination="6sn-6K-g8D" id="P0L-EI-VhO"/>
                         <outlet property="sendBtn" destination="ziz-iu-C1D" id="HJn-QP-DCN"/>
                         <outlet property="tableView" destination="HDu-TJ-kK7" id="uxM-vD-tj2"/>
+                        <outlet property="typingUserLbl" destination="z7v-fM-GxS" id="pDH-N7-ZgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AfZ-dB-tJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

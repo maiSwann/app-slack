@@ -9,6 +9,7 @@ Using :
 - API requests
 - MVC
 - Cocoapods
+- https://github.com/John-Lluch/SWRevealViewController
 
 Features :
 ---------
